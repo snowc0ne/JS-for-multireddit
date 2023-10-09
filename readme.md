@@ -15,14 +15,23 @@ Log out of your Old Reddit account then in an incognito session, Log in to your 
 Step 2:
 Here is the Javascript you will have to input into the console to iterate through every join button on that page:
 "
+
+
 // Get all the "join" buttons on the page
+
+
 const joinButtons = document.querySelectorAll('a.active.add.login-required');
 
+
 // Loop through each "join" button and click it
+
+
 for (const button of joinButtons) {
   button.click(); // Click the button
   await new Promise(resolve => setTimeout(resolve, 1000)); // Wait for a second (adjust the delay as needed)
 }
+
+
 "
 
 You will just have to paste the above script in the console pane on the multireddit of all your SubReddits.
