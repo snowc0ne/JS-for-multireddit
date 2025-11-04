@@ -11,7 +11,25 @@ Log out of your Old Reddit account then in an incognito session, Log in to your 
 
 
 
+NEW CODE:
 
+"
+
+(async () => {
+  const joinButtons = document.querySelectorAll('a.active.add.login-required');
+  
+  for (const button of joinButtons) {
+    button.click();
+    await new Promise(resolve => setTimeout(resolve, 1000)); // wait 1s between clicks
+  }
+
+  console.log(`Clicked ${joinButtons.length} join buttons`);
+})();
+
+"
+
+
+OLD CODE:
 Step 2:
 Here is the Javascript you will have to input into the console to iterate through every join button on that page:
 "
